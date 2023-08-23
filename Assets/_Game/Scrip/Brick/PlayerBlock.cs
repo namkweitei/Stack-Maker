@@ -36,9 +36,10 @@ public class PlayerBlock : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("..");
         if (other.CompareTag("Edible") )
         {
-            Debug.Log("..");
+           
             GameObject go;
             go = Instantiate(stackBlockPrefab, StackPos(), Quaternion.identity, playerBlock);
             go.transform.rotation = Quaternion.Euler(-90f, 0f, -90f);
